@@ -17,6 +17,20 @@ FFMPEG_CONFIG_FLAGS_BASE=(
   --disable-pthreads
   --disable-w32threads
   --disable-os2threads
+  --disable-everything
+  --enable-ffmpeg
+  --enable-small
+  --enable-avcodec
+  --enable-avformat
+  --enable-avfilter
+  --enable-swresample
+  --enable-swscale
+  --enable-filter=scale
+  --enable-decoder=h264,mpeg4
+  --enable-encoder=rawvideo,libx264,mpeg4
+  --enable-protocol=file,pipe
+  --enable-demuxer=mov,h264
+  --enable-muxer=rawvideo,mp4,h264
   --pkg-config-flags="--static"
   --enable-lto            # use link-time optimization
 
